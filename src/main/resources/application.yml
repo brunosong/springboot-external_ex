@@ -1,0 +1,43 @@
+
+my:
+  datasource:
+    url: local.brunosong.com
+    username: brunosong
+    password: password
+    etc:
+      timeout: 3500ms
+      options: DEV,PROD
+      max-connection: 1
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+my:
+  datasource:
+    url: dev.brunosong.com
+    username: dev.brunosong
+    password: dev.password
+    etc:
+      timeout: 5500ms
+      options: DEV
+      max-connection: 5
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+my:
+  datasource:
+    url: prod.brunosong.com
+    username: brunosong
+    password: password
+    etc:
+      timeout: 5500ms
+      options: PROD
+      max-connection: 7

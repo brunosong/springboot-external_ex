@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Import;
 //@Import(MyDataSourceValueConfig.class)
 //@Import(MyDataSourcePropertiesConfigV1.class)
 @Import(MyDataSourcePropertiesConfigV3.class)
-@ComponentScan(basePackages = "hello.datasource")
+@ComponentScan(basePackages = {"hello.datasource", "hello.pay"})
 @SpringBootApplication
 @ConfigurationPropertiesScan("hello")  //이게 있으면 @EnableConfigurationProperties(MyDataSourcePropertyV1.class) 이 설정이 빠져도 된다.
 public class ExternalReadApplication {
